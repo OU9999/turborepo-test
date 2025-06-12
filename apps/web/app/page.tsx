@@ -1,5 +1,5 @@
-import { Button } from '@workspace/ui/components/button';
-import { CustomButton } from '@workspace/ui/custom/button/custom-button';
+import { Button } from '@workspace/ui/components/base/button';
+import { CustomButton } from '@workspace/ui/components/button/custom-button';
 import Image from 'next/image';
 
 export default function Page() {

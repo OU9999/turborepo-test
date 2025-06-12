@@ -1,4 +1,4 @@
-import { Button, ButtonProps } from '@workspace/ui/components/button';
+import { Button, ButtonProps } from '@workspace/ui/components/base/button';
 import { cn } from '@workspace/ui/lib/utils';
 
 interface CustomButtonProps extends ButtonProps {}
