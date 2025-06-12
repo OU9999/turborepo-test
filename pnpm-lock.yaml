@@ -32,6 +32,9 @@ importers:
       '@workspace/ui':
         specifier: workspace:*
         version: link:../../packages/ui
+      '@workspace/util':
+        specifier: workspace:*
+        version: link:../../packages/util
       lucide-react:
         specifier: ^0.475.0
         version: 0.475.0(react@19.0.0)
@@ -205,6 +208,18 @@ importers:
       tailwindcss:
         specifier: ^4.0.8
         version: 4.0.8
+      typescript:
+        specifier: ^5.7.3
+        version: 5.7.3
+
+  packages/util:
+    devDependencies:
+      '@workspace/eslint-config':
+        specifier: workspace:*
+        version: link:../eslint-config
+      '@workspace/typescript-config':
+        specifier: workspace:*
+        version: link:../typescript-config
       typescript:
         specifier: ^5.7.3
         version: 5.7.3
