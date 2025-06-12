@@ -1,4 +1,3 @@
-import { TestQuery } from "@/components/test-query";
 import { Button } from "@workspace/ui/components/button";
 import { Input } from "@workspace/ui/components/input";
 
@@ -9,7 +8,6 @@ export default function Page() {
         <h1 className="text-2xl font-bold bg-test">Hello World</h1>
         <Button size="sm">Button</Button>
         <Input />
-        <TestQuery />
       </div>
     </div>
   );
