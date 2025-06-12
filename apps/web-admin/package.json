@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "next dev --turbopack --port 3001",
     "build": "next build",
-    "start": "next start",
+    "start": "cp -r public .next/standalone/apps/web-admin/ && cp -r .next/static .next/standalone/apps/web-admin/.next/ && PORT=3001 node .next/standalone/apps/web-admin/server.js",
+    "bs": "npm run build && npm run start",
     "lint": "next lint",
     "lint:fix": "next lint --fix",
     "typecheck": "tsc --noEmit"
