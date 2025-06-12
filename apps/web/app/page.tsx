@@ -1,14 +1,18 @@
-import { Button } from "@workspace/ui/components/button";
-import { Input } from "@workspace/ui/components/input";
-import Image from "next/image";
+import { Button } from '@workspace/ui/components/button';
+import { CustomButton } from '@workspace/ui/custom/button/custom-button';
+import Image from 'next/image';
 
 export default function Page() {
+  const hell = 'hel';
+
   return (
-    <div className="flex items-center justify-center min-h-svh">
+    <div className="flex min-h-svh items-center justify-center">
       <div className="flex flex-col items-center justify-center gap-4">
-        <h1 className="text-2xl font-bold bg-test">Hello World zz</h1>
+        <h1 className="text-test bg-test2 text-4xl font-bold">
+          Hello World zz
+        </h1>
         <Button size="sm">Button</Button>
-        <Input />
+        <CustomButton>HELLO!!</CustomButton>
         <Image
           src="/test.png"
           alt="test"
