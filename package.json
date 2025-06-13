@@ -7,6 +7,7 @@
     "dev": "turbo dev",
     "dev:web": "turbo dev --filter=web",
     "dev:web-admin": "turbo dev --filter=web-admin",
+    "start:web": "cd apps/web && pnpm run start",
     "lint": "turbo lint",
     "format": "prettier --write \"**/*.{ts,tsx,md,js}\""
   },
