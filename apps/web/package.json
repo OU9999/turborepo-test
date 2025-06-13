@@ -27,6 +27,7 @@
     "@types/react-dom": "^19",
     "@workspace/eslint-config": "workspace:^",
     "@workspace/typescript-config": "workspace:*",
+    "@workspace/constant": "workspace:*",
     "typescript": "^5.7.3"
   }
 }

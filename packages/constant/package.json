@@ -1,5 +1,5 @@
 {
-  "name": "@workspace/util",
+  "name": "@workspace/constant",
   "version": "0.0.1",
   "type": "module",
   "private": true,
@@ -12,9 +12,6 @@
     "typescript": "^5.7.3"
   },
   "exports": {
-    ".": "./src/utils.ts"
-  },
-  "dependencies": {
-    "date-fns": "^4.1.0"
+    ".": "./src/cst.ts"
   }
 }
