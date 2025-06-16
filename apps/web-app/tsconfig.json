@@ -6,7 +6,8 @@
       "@/*": ["./src/*"],
       "@workspace/ui/*": ["../../packages/ui/src/*"],
       "@workspace/util": ["../../packages/util/src/utils.ts"],
-      "@workspace/constant": ["../../packages/constant/src/cst.ts"]
+      "@workspace/constant": ["../../packages/constant/src/cst.ts"],
+      "@workspace/msw": ["../../packages/msw/src/index.ts"]
     },
     "plugins": [
       {

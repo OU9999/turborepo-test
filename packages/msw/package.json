@@ -1,0 +1,27 @@
+{
+  "name": "@workspace/msw",
+  "version": "0.0.1",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "lint": "eslint . --max-warnings 0"
+  },
+  "devDependencies": {
+    "@workspace/eslint-config": "workspace:*",
+    "@workspace/typescript-config": "workspace:*",
+    "typescript": "^5.7.3"
+  },
+  "packageManager": "pnpm@10.4.1",
+  "dependencies": {
+    "@types/node": "^20",
+    "msw": "^2.10.2"
+  },
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "msw": {
+    "workerDirectory": [
+      "../../apps/web-app/public"
+    ]
+  }
+}
