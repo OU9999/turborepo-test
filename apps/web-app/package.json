@@ -4,9 +4,9 @@
   "type": "module",
   "private": true,
   "scripts": {
-    "dev": "next dev --turbopack",
+    "dev": "next dev --turbopack --port 3001",
     "build": "next build",
-    "start": "cp -r public .next/standalone/apps/web-app/ && cp -r .next/static .next/standalone/apps/web-app/.next && PORT=3002 node .next/standalone/apps/web-app/server.js",
+    "start": "cp -r public .next/standalone/apps/web-app/ && cp -r .next/static .next/standalone/apps/web-app/.next && PORT=3001 node .next/standalone/apps/web-app/server.js",
     "bs": "pnpm run build && pnpm run start",
     "lint": "next lint",
     "lint:fix": "next lint --fix",
