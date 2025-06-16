@@ -9,13 +9,11 @@
   "devDependencies": {
     "@workspace/eslint-config": "workspace:*",
     "@workspace/typescript-config": "workspace:*",
+    "@types/node": "^20",
+    "msw": "^2.10.2",
     "typescript": "^5.7.3"
   },
   "packageManager": "pnpm@10.4.1",
-  "dependencies": {
-    "@types/node": "^20",
-    "msw": "^2.10.2"
-  },
   "exports": {
     ".": "./src/index.ts"
   },

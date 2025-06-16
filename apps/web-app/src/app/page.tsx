@@ -8,7 +8,7 @@ export default function Home() {
     <div className="flex min-h-svh items-center justify-center">
       <div className="flex flex-col items-center justify-center gap-4">
         <Button className="text-test">Button</Button>
-        <CustomButton>HELLO!!</CustomButton>
+        <CustomButton>HELLO!~~~!</CustomButton>
         <Image
           src="/uhm.JPG"
           alt="logo"
