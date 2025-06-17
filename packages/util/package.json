@@ -11,10 +11,12 @@
     "@workspace/typescript-config": "workspace:*",
     "typescript": "^5.7.3"
   },
+  "main": "./src/index.ts",
   "exports": {
-    ".": "./src/utils.ts"
+    ".": "./src/index.ts"
   },
   "dependencies": {
-    "date-fns": "^4.1.0"
+    "date-fns": "^4.1.0",
+    "es-toolkit": "^1.39.3"
   }
 }
