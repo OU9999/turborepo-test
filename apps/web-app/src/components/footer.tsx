@@ -4,8 +4,9 @@ import { CST } from '@workspace/constant';
 import { stringUtil } from '@workspace/util';
 
 const Footer = () => {
-  const string = stringUtil.escape('&');
-  console.log(string);
+  const escaped = stringUtil.escape('&<>"');
+  console.log(escaped);
+
   return <footer>{CST.FOOTER.title}</footer>;
 };
 

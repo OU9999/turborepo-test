@@ -15,8 +15,6 @@ const MSWProvider = ({ children }: PropsWithChildren) => {
     if (!mswReady) {
       init();
     }
-
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [mswReady]);
 
   return <>{children}</>;
