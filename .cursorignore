@@ -1,0 +1,5 @@
+# 커서 코드 인덱싱 제외
+# .gitignore extend
+
+# 문서
+docs
