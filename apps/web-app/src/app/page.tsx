@@ -3,7 +3,7 @@ import { CustomButton } from '@workspace/ui/components/button/custom-button';
 import { Footer } from '../components/footer';
 import Image from 'next/image';
 
-export default function Home() {
+export default async function Home() {
   return (
     <div className="flex min-h-svh items-center justify-center">
       <div className="flex flex-col items-center justify-center gap-4">

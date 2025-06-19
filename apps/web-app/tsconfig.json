@@ -7,7 +7,8 @@
       "@workspace/ui/*": ["../../packages/ui/src/*"],
       "@workspace/util": ["../../packages/util/src/index.ts"],
       "@workspace/constant": ["../../packages/constant/src/cst.ts"],
-      "@workspace/msw": ["../../packages/msw/src/index.ts"]
+      "@workspace/msw": ["../../packages/msw/src/index.ts"],
+      "@workspace/network": ["../../packages/network/src/index.ts"]
     },
     "plugins": [
       {
