@@ -1,31 +1,52 @@
-# shadcn/ui monorepo template
+# 프로젝트 아키텍처 및 규칙
 
-This template is for creating a monorepo with shadcn/ui.
+- 이 문서는 **EZIS** 모노레포의 전체적인 구조와 공통 개발 규칙을 정의합니다.
+- 각 패키지 및 애플리케이션에 대한 자세한 내용은 해당 디렉터리의 `README.md` 파일을 참고해 주세요.
 
-## Usage
+## 모노레포 구조
 
-```bash
-pnpm dlx shadcn@latest init
-```
+이 프로젝트는 여러 개의 애플리케이션과 공유 패키지로 구성된 모노레포입니다.
 
-## Adding components
+- **`apps/`**: 실제 배포되는 애플리케이션이 위치합니다. (예: Next.js 웹 앱)
+- **`packages/`**: 여러 앱에서 공유되는 코드(UI 컴포넌트, 유틸리티 함수 등)가 위치합니다.
 
-To add components to your app, run the following command at the root of your `web` app:
+---
 
-```bash
-pnpm dlx shadcn@latest add button -c apps/web
-```
+## `apps` 디렉터리
 
-This will place the ui components in the `packages/ui/src/components` directory.
+애플리케이션별 코드를 관리합니다.
 
-## Tailwind
+### `apps` 개발 규칙
 
-Your `tailwind.config.ts` and `globals.css` are already set up to use the components from the `ui` package.
+- 새로운 애플리케이션을 추가할 경우 `apps` 디렉터리 내에 생성합니다.
+- 애플리케이션별로 특화된 컴포넌트는 해당 앱의 `components` 폴더에 작성합니다. (예: `apps/web/components`)
+- 공통으로 사용될 가능성이 있는 컴포넌트는 `packages/ui`에 작성하는 것을 우선적으로 고려합니다.
 
-## Using components
+---
 
-To use the components in your app, import them from the `ui` package.
+## `packages` 디렉터리
 
-```tsx
-import { Button } from "@workspace/ui/components/button";
-```
+애플리케이션 간에 공유되는 패키지를 관리합니다.
+
+- **`packages/ui`**: 공통 UI 컴포넌트 (버튼, 인풋, 뱃지 등)
+- **`packages/util`**: 순수 함수 유틸리티 (날짜, 문자열, 함수 처리 등)
+
+### `packages` 개발 규칙
+
+- **UI 컴포넌트**: 재사용 가능한 UI 컴포넌트는 `packages/ui/src/components`에 작성합니다.
+  - 기본 컴포넌트는 `base` 폴더에, 특정 목적의 조합 컴포넌트는 별도 폴더(예: `button`)에 관리합니다.
+- **유틸리티 함수**: 여러 곳에서 사용되는 순수 함수는 `packages/util/src/` 아래에 카테고리별로(예: `date`, `string`) 추가합니다.
+- **API 호출**: 서버와 통신하는 코드는 `packages/network` 패키지를 사용합니다.
+- **상수**: 여러 곳에서 참조되는 상수는 `packages/constant`에 정의하여 사용합니다.
+- **의존성**: 각 패키지는 **자신에게 꼭 필요한 의존성만**을 가져야 합니다.
+  - `pnpm add <package-name>`: 런타임에 필요한 의존성 (`dependencies`)
+  - `pnpm add -D <package-name>`: 빌드, 테스트 등 개발 시에만 필요한 의존성 (`devDependencies`)
+
+---
+
+## 의존성 관리
+
+- **설정 상속**: `eslint`나 `typescript` 같은 설정 파일들은 `packages`에 있는 `base` 설정을 `extends` 하여 사용합니다. 이를 통해 전체적인 설정의 일관성을 유지하고 중복을 최소화합니다.
+- **개별 의존성**: 특정 패키지나 앱에서만 사용하는 라이브러리는 해당 워크스페이스의 `package.json`에 추가합니다. (예: `apps/web/package.json`)
+
+---

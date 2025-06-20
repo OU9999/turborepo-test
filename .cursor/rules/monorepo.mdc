@@ -1,0 +1,51 @@
+# Project Architecture and Rules
+
+This document defines the structure and development rules for the monorepo configured with Turborepo.
+
+## Monorepo Structure
+
+This project is a monorepo consisting of multiple applications and shared packages.
+
+- `apps/`: Contains the actual applications to be deployed (e.g., Next.js web apps).
+- `packages/`: Contains shared code (UI components, utility functions, etc.) used across different apps.
+
+---
+
+## `apps` Directory
+
+Manages application-specific code.
+
+### `apps` Development Rules
+
+- When adding a new application, create it within the `apps` directory.
+- Application-specific components should be created in the `components` folder of the respective app (e.g., `apps/web/components`).
+- Prioritize creating components that are likely to be used in common in `packages/ui`.
+
+---
+
+## `packages` Directory
+
+Manages packages shared between applications.
+
+- `packages/ui`: Common UI components (buttons, inputs, badges, etc.).
+- `packages/util`: Pure function utilities (date, string, function handling, etc.).
+
+### `packages` Development Rules
+
+- UI Components: Reusable UI components should be created in `packages/ui/src/components`.
+  - Basic components are managed in the `base` folder, and composite components for specific purposes are managed in separate folders (e.g., `button`).
+- Utility Functions: Pure functions used in multiple places should be added under `packages/util/src/` by category (e.g., `date`, `string`).
+- API Calls: Code for communicating with the server should use the `packages/network` package.
+- Constants: Constants referenced in multiple places should be defined and used from `packages/constant`.
+- Dependencies: Each package must have only the dependencies it absolutely needs.
+  - `pnpm add <package-name>`: for runtime dependencies (`dependencies`).
+  - `pnpm add -D <package-name>`: for development-only dependencies like build tools, tests, etc. (`devDependencies`).
+
+---
+
+## Dependency Management
+
+- Configuration Inheritance: Configuration files like `eslint` or `typescript` should `extend` the base configuration located in `packages`. This maintains overall configuration consistency and minimizes duplication.
+- Individual Dependencies: Libraries used only by a specific package or app should be added to that workspace's `package.json` (e.g., `apps/web/package.json`).
+
+---
