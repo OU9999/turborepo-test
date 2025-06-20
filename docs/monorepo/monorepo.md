@@ -81,7 +81,7 @@ monorepo/
 ### packages - util - utils.ts
 
 ```ts left
-import { DateUtil } from "./date/date";
+import { DateUtil } from './date/date';
 
 export class Util {
   static Date = DateUtil;
@@ -141,10 +141,10 @@ export class Util {
 // tsconfig를 설정안하면 다음과 같이 보임
 // import { Util } from "../../packages/util/src/utils.ts";
 
-import { Util } from "@workspace/util";
+import { Util } from '@workspace/util';
 
 const TestDate = () => {
-  const exampleDate = "2025-05-13T13:47:59.039995115Z";
+  const exampleDate = '2025-05-13T13:47:59.039995115Z';
   const formattedDate = Util.Date.formatDate(exampleDate);
 
   return <div>{formattedDate}</div>;

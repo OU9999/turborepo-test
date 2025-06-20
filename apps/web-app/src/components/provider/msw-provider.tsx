@@ -1,5 +1,6 @@
 'use client';
 
+import { handlers } from '@/mock/handlers';
 import { initMsw } from '@workspace/msw';
 import { PropsWithChildren, useEffect, useState } from 'react';
 
@@ -8,7 +9,7 @@ const MSWProvider = ({ children }: PropsWithChildren) => {
 
   useEffect(() => {
     const init = async () => {
-      await initMsw();
+      await initMsw(handlers);
       setMswReady(true);
     };
 
