@@ -1,3 +1,8 @@
+---
+description: 
+globs: 
+alwaysApply: false
+---
 # Project Architecture and Rules
 
 This document defines the structure and development rules for the monorepo configured with Turborepo.
