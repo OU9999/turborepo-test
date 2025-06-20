@@ -5,7 +5,7 @@ import Image from 'next/image';
 
 export default async function Home() {
   return (
-    <div className="flex min-h-svh items-center justify-center">
+    <section>
       <div className="flex flex-col items-center justify-center gap-4">
         <Button className="text-test">Button</Button>
         <CustomButton>HELLO!~~~!</CustomButton>
@@ -18,6 +18,6 @@ export default async function Home() {
         />
         <Footer />
       </div>
-    </div>
+    </section>
   );
 }
