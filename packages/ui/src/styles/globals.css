@@ -117,6 +117,9 @@
   --color-sidebar-ring: var(--sidebar-ring);
   --color-test: #00aeef;
   --color-test2: #330231;
+  --color-wdl-main: #1d1f31;
+  --color-wdl-main-active: #2a2f41;
+  --color-wdl-primary: #00c489;
 }
 
 @layer base {

@@ -6,9 +6,9 @@ import { NavItems } from './nav-items';
 
 const items = [
   {
-    title: 'Quick Create',
+    title: 'Activity',
     icon: Circle,
-    url: '/test',
+    url: '/',
   },
   {
     title: 'Inbox',
@@ -19,8 +19,8 @@ const items = [
 
 const NavMain = () => {
   return (
-    <SidebarGroup>
-      <SidebarGroupContent className="flex flex-col gap-2">
+    <SidebarGroup className="p-0">
+      <SidebarGroupContent className="flex flex-col gap-0">
         <NavItems items={items} />
       </SidebarGroupContent>
     </SidebarGroup>

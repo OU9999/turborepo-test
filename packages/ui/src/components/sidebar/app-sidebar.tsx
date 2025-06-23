@@ -4,7 +4,6 @@ import {
   SidebarFooter,
   SidebarHeader,
 } from '../base/sidebar';
-import { NavDocuments } from './nav/nav-docs';
 import { NavMain } from './nav/nav-main';
 
 const AppSidebar = () => {
@@ -13,7 +12,6 @@ const AppSidebar = () => {
       <SidebarHeader>header</SidebarHeader>
       <SidebarContent>
         <NavMain />
-        <NavDocuments />
       </SidebarContent>
       <SidebarFooter>footer</SidebarFooter>
     </Sidebar>
