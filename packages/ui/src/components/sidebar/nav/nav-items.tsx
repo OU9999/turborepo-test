@@ -3,6 +3,7 @@ import {
   SidebarMenuButton,
   SidebarMenuItem,
 } from '../../base/sidebar';
+import Link from 'next/link';
 
 interface NavItem {
   title: string;
@@ -18,12 +19,14 @@ const NavItems = ({ items }: NavItemsProps) => {
   return (
     <SidebarMenu>
       {items.map((item) => (
-        <SidebarMenuItem key={item.title}>
-          <SidebarMenuButton tooltip={item.title}>
-            {item.icon && <item.icon />}
-            <span>{item.title}</span>
-          </SidebarMenuButton>
-        </SidebarMenuItem>
+        <Link href={item.url} key={item.title}>
+          <SidebarMenuItem>
+            <SidebarMenuButton tooltip={item.title}>
+              {item.icon && <item.icon />}
+              <span>{item.title}</span>
+            </SidebarMenuButton>
+          </SidebarMenuItem>
+        </Link>
       ))}
     </SidebarMenu>
   );

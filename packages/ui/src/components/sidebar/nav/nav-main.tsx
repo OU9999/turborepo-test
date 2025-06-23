@@ -8,12 +8,12 @@ const items = [
   {
     title: 'Quick Create',
     icon: Circle,
-    url: '/quick-create',
+    url: '/test',
   },
   {
     title: 'Inbox',
     icon: Mail,
-    url: '/inbox',
+    url: '/test',
   },
 ];
 
