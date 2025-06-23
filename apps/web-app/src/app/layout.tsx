@@ -1,9 +1,7 @@
 import type { Metadata } from 'next';
 import { Geist, Geist_Mono } from 'next/font/google';
-// import '@/styles/globals.css';
 import '@workspace/ui/globals.css';
 import { MSWProvider } from '@/components/provider/msw-provider';
-import { AppSidebar } from '@workspace/ui/components/sidebar/app-sidebar';
 import { ColorThemeProvider } from '@/components/provider/color-theme-provider';
 import { SidebarProvider } from '@/components/provider/sidebar-provider';
 
