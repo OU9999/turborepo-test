@@ -9,11 +9,11 @@ import { NavMain } from './nav/nav-main';
 const AppSidebar = () => {
   return (
     <Sidebar>
-      <SidebarHeader>header</SidebarHeader>
-      <SidebarContent>
+      <SidebarHeader className="bg-wdl-main border-b-1">header</SidebarHeader>
+      <SidebarContent className="bg-wdl-main">
         <NavMain />
       </SidebarContent>
-      <SidebarFooter>footer</SidebarFooter>
+      <SidebarFooter className="bg-wdl-main border-t-1">footer</SidebarFooter>
     </Sidebar>
   );
 };
